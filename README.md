@@ -19,4 +19,4 @@ To add more text areas, follow these steps:
        <textarea id="textAreaX" placeholder="Enter your text here...">Sample Text X</textarea>
        <button onclick="copyToClipboard('textAreaX')">Copy to Clipboard</button>
    </div>
-A sample HTML snippet is also given in the htmlm file. you can copy and edit it to add more blocks.
+A sample HTML snippet is also given in the html file. You can copy and edit it to add more blocks.
