@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Paste Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .textarea-container {
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Copy Paste Tool</h1>
+
+    <!-- Text area container 1 -->
+    <!-- Change the text within <textarea></textarea> tags, that needs to be copied -->
+    <div class="textarea-container">
+        <textarea id="textArea1" placeholder="Enter your text here...">Sample Text 1</textarea>
+        <button onclick="copyToClipboard('textArea1')">Copy to Clipboard</button>
+    </div>
+
+    <!-- Text area container 2 -->
+    <div class="textarea-container">
+        <textarea id="textArea2" placeholder="Enter your text here...">Sample Text 2</textarea>
+        <button onclick="copyToClipboard('textArea2')">Copy to Clipboard</button>
+    </div>
+
+    <!-- Add more text area containers as needed -->
+    <!-- Copy the below section and update the id and placeholder for each new text area -->
+    <!--
+    <div class="textarea-container">
+        <textarea id="textArea3" placeholder="Enter your text here...">
+            Sample Text 3
+        </textarea>
+        <button onclick="copyToClipboard('textArea3')">Copy to Clipboard</button>
+    </div>
+    -->
+
+    <script>
+        // Function to copy text to clipboard
+        function copyToClipboard(id) {
+            var textArea = document.getElementById(id);
+            textArea.select();
+            textArea.setSelectionRange(0, 99999); // For mobile devices
+            document.execCommand('copy');
+            alert('Text copied to clipboard');
+        }
+    </script>
+</body>
+</html>
